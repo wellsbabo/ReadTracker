@@ -1,5 +1,7 @@
 # ReadTracker
 
+![ReadTracker 로고](https://github.com/wellsbabo/ReadTracker/blob/main/icons/RT128.png)
+
 ReadTracker는 사용자가 동일한 콘텐츠를 여러 번 읽는 것을 방지하여 시간을 효율적으로 사용할 수 있도록 돕는 Chrome 확장 프로그램입니다. 사용자가 방문한 웹 페이지의 제목을 저장하고, 동일한 제목의 콘텐츠를 다시 방문할 때 알림을 제공합니다.
 
 ## 기능
