@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 저장된 제목 목록을 새로고침하는 함수
   function refreshTitleList() {
-    chrome.storage.local.get('savedTitles', (data) => {
+    chrome.storage.sync.get('savedTitles', (data) => {
       const savedTitles = data.savedTitles || [];
       titleList.innerHTML = '';
       savedTitles.forEach((title, index) => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => {
           savedTitles.splice(index, 1);
-          chrome.storage.local.set({ savedTitles: savedTitles }, () => {
+          chrome.storage.sync.set({ savedTitles: savedTitles }, () => {
             refreshTitleList();
           });
         });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function saveTitle() {
     const inputTitle = titleInput.value.trim().toLowerCase().replace(/\s+/g, ' ');
     if (inputTitle) {
-      chrome.storage.local.get('savedTitles', (data) => {
+      chrome.storage.sync.get('savedTitles', (data) => {
         const savedTitles = data.savedTitles || [];
         const normalizedSavedTitles = savedTitles.map(title => title.toLowerCase().replace(/\s+/g, ' '));
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           message.textContent = 'You have already seen this content.';
         } else {
           savedTitles.push(inputTitle);
-          chrome.storage.local.set({ savedTitles: savedTitles }, () => {
+          chrome.storage.sync.set({ savedTitles: savedTitles }, () => {
             message.textContent = 'Title saved.';
             refreshTitleList();
           });
