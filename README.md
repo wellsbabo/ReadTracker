@@ -27,4 +27,4 @@ ReadTracker는 사용자가 동일한 콘텐츠를 여러 번 읽는 것을 방�
 
 ##
 
-질문이나 문제가 있으면 your-email@example.com으로 문의해 주세요.
+질문이나 문제가 있으면 wellsbabo@naver.com으로 문의해 주세요.
