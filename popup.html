@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title Input Extension</title>
+  <title>ReadTracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <h1>Title Input</h1>
-    <input type="text" id="titleInput" placeholder="Enter title">
-    <button id="saveButton">Save Title</button>
+    <h1>ReadTracker</h1>
+    <div class="input-container">
+      <input type="text" id="titleInput" placeholder="Enter title">
+      <button id="saveButton">Save</button>
+    </div>
     <p id="message"></p>
+    <button id="showButton" class="small-btn">Show Titles</button>
+    <div id="titleContainer" class="hidden">
+      <ul id="titleList"></ul>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
